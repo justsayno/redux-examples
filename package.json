@@ -7,7 +7,7 @@
     "prebuild": "npm install",
     "build": "webpack",
     "prestart": "npm install",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --inline"
   },
   "author": "Seth Reid",
   "license": "MIT",
