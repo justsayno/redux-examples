@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     sassLoader: {
-        includePaths: []
+        includePaths: ['./node_modules/materialize-css/sass']
     },
     plugins: [
         new HtmlWebpackPlugin({

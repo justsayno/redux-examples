@@ -1,6 +1,6 @@
 # Webpack Html Sass Starter
 
-This is a very simple starter kit to get going with writing basuc html and css using [Webpack](https://webpack.github.io/),
+This is a very simple starter kit to get going with writing html and sass using [Webpack](https://webpack.github.io/),
 [Sass](http://sass-lang.com/) and [Babel](https://babeljs.io/).
 
 ## Quick start
