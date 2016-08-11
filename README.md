@@ -5,6 +5,15 @@ This is a very simple starter kit to get going with writing basuc html and css u
 
 ## Quick start
 
+> Requires Node >= 4
+
+To install dependencies:
+
+```
+npm install webpack
+```
+
+
 To run development mode on localhost:3000:
 
 ``` shell
