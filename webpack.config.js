@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     sassLoader: {
-        includePaths: [path.resolve(__dirname, "./node_modules/office-ui-fabric-core/src/sass")]
+        includePaths: []
     },
     plugins: [
         new HtmlWebpackPlugin({
