@@ -4,9 +4,7 @@
   "description": "A starter kit for building html/css/javasciprt templates using WebPack, Sass and Babel.",
   "main": "index.html",
   "scripts": {
-    "prebuild": "npm install",
     "build": "webpack",
-    "prestart": "npm install",
     "start": "webpack-dev-server --inline"
   },
   "author": "Seth Reid",
