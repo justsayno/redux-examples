@@ -10,7 +10,7 @@ This is a very simple starter kit to get going with writing basuc html and css u
 To install dependencies:
 
 ```
-npm install webpack
+npm install
 ```
 
 
