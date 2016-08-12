@@ -40,7 +40,7 @@ npm run build
 
 This will create a uglified, minified version of the app which will contain three files:
 
-- index.hmlt
+- index.html
 - index_bundle.js
 - index_bundle.map.js
 
