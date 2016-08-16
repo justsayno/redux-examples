@@ -1,7 +1,7 @@
 {
-  "name": "webpack-html-sass-starter",
+  "name": "redux-examples",
   "version": "0.0.1",
-  "description": "A starter kit for building html/css/javasciprt templates using WebPack, Sass and Babel.",
+  "description": "Simple example repo for getting started with redux.",
   "main": "index.html",
   "scripts": {
     "build": "webpack --optimize-minimize",
