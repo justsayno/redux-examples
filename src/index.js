@@ -1,5 +1,9 @@
 import expect from 'expect'
 
+export const employeeReducer = (state, action) => {
+	return state
+}
+
 const testRequestEmployees = () => {
 	const action = {
 		type: 'EMPLOYEES_REQUESTED'
