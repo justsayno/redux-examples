@@ -2,5 +2,5 @@
 {
     "javascript.validate.enable": false,
     "editor.tabSize": 2,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": true
 }
