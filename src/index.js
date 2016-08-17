@@ -12,9 +12,7 @@ const getEmployees = () => {
 
 export const employeeReducer = (state, action) => {
 	if (action.type === 'EMPLOYEES_REQUESTED') {
-		return Object.assign({}, state, {
-			employees: getEmployees()
-		})
+		state.employees = getEmployees()
 	}
 	return state
 }
@@ -33,8 +31,6 @@ const testRequestEmployees = () => {
 			lastName: 'Boon'
 		}]
 	}
-
-	deepFreeze(stateBefore)
 
 	expect(employeeReducer(stateBefore, action)).toEqual(stateAfter)
 }
