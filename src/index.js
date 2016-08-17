@@ -1,5 +1,21 @@
 import expect from 'expect'
 
+const getEmployees = () => {
+	return [
+		{
+			firstName: 'Gabriella',
+			lastName: 'Boon'
+		}
+	]
+}
+
+export const employeeReducer = (state, action) => {
+	if (action.type === 'EMPLOYEES_REQUESTED') {
+		state.employees = getEmployees()
+	}
+	return state
+}
+
 const testRequestEmployees = () => {
 	const action = {
 		type: 'EMPLOYEES_REQUESTED'
@@ -7,7 +23,10 @@ const testRequestEmployees = () => {
 	const stateBefore = {
 		employees: []
 	}
-  const stateAfter = {
+
+	
+
+	const stateAfter = {
 		employees: [{
 			firstName: 'Gabriella',
 			lastName: 'Boon'
