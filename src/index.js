@@ -12,7 +12,9 @@ const getEmployees = () => {
 
 export const employeeReducer = (state, action) => {
 	if (action.type === 'EMPLOYEES_REQUESTED') {
-		state.employees = getEmployees()
+		return Object.assign({}, state, {
+			employees: getEmployees()
+		})
 	}
 	return state
 }
