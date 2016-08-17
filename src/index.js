@@ -17,6 +17,7 @@ export const employeeReducer = (state, action) => {
 	return state
 }
 
+
 const testRequestEmployees = () => {
 	const action = {
 		type: 'EMPLOYEES_REQUESTED'
@@ -31,6 +32,9 @@ const testRequestEmployees = () => {
 			lastName: 'Boon'
 		}]
 	}
+
+	// make sure stateBefore is not mutated
+	deepFreeze(stateBefore)
 
 	expect(employeeReducer(stateBefore, action)).toEqual(stateAfter)
 }
