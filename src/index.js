@@ -1,4 +1,5 @@
 import expect from 'expect'
+import deepFreeze from 'deep-freeze'
 
 const getEmployees = () => {
 	return [
@@ -10,7 +11,11 @@ const getEmployees = () => {
 }
 
 export const employeeReducer = (state, action) => {
-	state.employees = getEmployees()
+	if (action.type === 'EMPLOYEES_REQUESTED') {
+		return Object.assign({}, state, {
+			employees: getEmployees()
+		})
+	}
 	return state
 }
 
@@ -21,12 +26,16 @@ const testRequestEmployees = () => {
 	const stateBefore = {
 		employees: []
 	}
-  const stateAfter = {
+
+	const stateAfter = {
 		employees: [{
 			firstName: 'Gabriella',
 			lastName: 'Boon'
 		}]
 	}
+
+	deepFreeze(stateBefore)
+
 	expect(employeeReducer(stateBefore, action)).toEqual(stateAfter)
 }
 
