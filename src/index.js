@@ -1,5 +1,6 @@
 import expect from 'expect'
 import deepFreeze from 'deep-freeze'
+import { createStore } from 'redux'
 
 const getEmployees = () => {
 	return [
@@ -19,6 +20,7 @@ export const employeeReducer = (state, action) => {
 	return state
 }
 
+let store = createStore(employeeReducer)
 
 const testRequestEmployees = () => {
 	const action = {
