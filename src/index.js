@@ -24,27 +24,32 @@ export const employeeReducer = (state = initialState, action) => {
 	return state
 }
 
+deepFreeze(initialState)
 let store = createStore(employeeReducer)
 
-const testRequestEmployees = () => {
-	const action = {
-		type: 'EMPLOYEES_REQUESTED'
-	}
-	const stateBefore = {
-		employees: []
-	}
 
-	const stateAfter = {
+const testRequestEmployees = () => {
+	// the action I am dispatching
+	const action = {
+		  type: 'EMPLOYEES_REQUESTED'
+	}
+	
+	// create the store
+	let store = createStore(employeeReducer)
+
+	// the state that should be there after calling that action
+	const expectedState = {
 		employees: [{
 			firstName: 'Gabriella',
 			lastName: 'Boon'
 		}]
 	}
 
-	// make sure stateBefore is not mutated
-	deepFreeze(stateBefore)
+	// dispatch the action
+	store.dispatch(action)
 
-	expect(employeeReducer(stateBefore, action)).toEqual(stateAfter)
+	// check the resulting state returned from getState() is equal to what I expected
+	expect(store.getState()).toEqual(expectedState)
 }
 
 testRequestEmployees()
