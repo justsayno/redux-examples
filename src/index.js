@@ -11,7 +11,7 @@ const testRequestEmployees = () => {
 	const stateBefore = {
 		employees: []
 	}
-  const stateAfter = {
+	const stateAfter = {
 		employees: [{
 			firstName: 'Gabriella',
 			lastName: 'Boon'
