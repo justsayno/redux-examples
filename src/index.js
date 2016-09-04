@@ -11,7 +11,11 @@ const getEmployees = () => {
 	]
 }
 
-export const employeeReducer = (state, action) => {
+const initialState = {
+	employees: []
+}
+
+export const employeeReducer = (state = initialState, action) => {
 	if (action.type === 'EMPLOYEES_REQUESTED') {
 		return Object.assign({}, state, {
 			employees: getEmployees()
