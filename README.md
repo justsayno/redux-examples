@@ -1,6 +1,6 @@
-# Webpack Html Sass Starter
+# Redux Examples
 
-Simple example repo for getting started with redux.
+Simple example repo for getting started with redux. Follow the [tutorial here](https://github.com/justsayno/redux-react-introduction-tutorial)
 
 ## Quick start
 
