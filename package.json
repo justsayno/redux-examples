@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "deep-freeze": "0.0.1",
-    "expect": "^1.20.2"
+    "expect": "^1.20.2",
+    "redux": "^3.5.2"
   }
 }
