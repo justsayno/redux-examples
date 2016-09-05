@@ -8,8 +8,11 @@ Simple example repo for getting started with redux.
 
 ### Install dependencies:
 
+Make sure you install dependencies before getting started:
+
 ```
-npm start
+git clone https://github.com/justsayno/redux-examples
+npm install
 ```
 
 ### Run the app
