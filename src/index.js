@@ -27,7 +27,6 @@ export const employeeReducer = (state = initialState, action) => {
 deepFreeze(initialState)
 let store = createStore(employeeReducer)
 
-
 const testRequestEmployees = () => {
 	// the action I am dispatching
 	const action = {
