@@ -24,15 +24,15 @@ export const employeeReducer = (state = initialState, action) => {
 	return state
 }
 
+deepFreeze(initialState)
+// create the store
+let store = createStore(employeeReducer, window.devToolsExtension && window.devToolsExtension())
+
 const testRequestEmployees = () => {
 	// the action I am dispatching
 	const action = {
 		  type: 'EMPLOYEES_REQUESTED'
 	}
-
-	deepFreeze(initialState)
-	// create the store
-	let store = createStore(employeeReducer, window.devToolsExtension && window.devToolsExtension())
 
 	// the state that should be there after calling that action
 	const expectedState = {
